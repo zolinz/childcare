@@ -1,12 +1,19 @@
 package childcare.model;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.*;
 
-@Component
+@Entity
+@Table(name = "Toddler" )
 public class Child {
 
+    @Id
+    @Column(name = "ID_TODDLER")
     private int id;
+
+    @Column(name = "FIRST_NAME")
     private String firstName;
+
+    @Column(name = "LAST_NAME")
     private String lastName;
 
     public int getId() {
