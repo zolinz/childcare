@@ -1,13 +1,10 @@
 package childcare.controller;
 
-import childcare.domain.Child;
 import childcare.domain.ChildCare;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("/cc")
@@ -17,10 +14,11 @@ public class ChildCareController {
     ChildCare childCare;
 
 
-    @RequestMapping("/getChildren")
-    @ResponseBody
-    public List<Child> getChildren(){
-        return childCare.getChildren();
+    @RequestMapping("/listkiddos")
+    public String getChildren(Model model){
+
+        model.addAttribute("children" , childCare.getChildren());
+        return "views/list";
     }
 
 }

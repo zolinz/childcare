@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--  Page Title th:text="${pageTitle}" -->
+    <!--<title th:text="${pageTitle}">Blog Post - List</title>
+-->
+    <!-- CSS th:href="@{/css/blog.css}" -->
+    <!--<link rel="stylesheet" href="../static/css/blog.css" th:href="@{/css/blog.css}"/>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">ChildCare.com</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+                <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Guest User</a></p>
+            </div>
+        </div>
+    </nav>
+
+
+    <table>
+        <tr>
+            <th>Child ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+
+        <tr  th:each="child : ${children}">
+            <td th:text="${child.id}" />
+            <td th:text="${child.firstName}" />
+            <td th:text="${child.lastName}" />
+        </tr>
+    </table>
+
+    <!-- STEP 3: Dipslay Each Post - th:each="post : ${posts}" -->
+   <!-- <article th:each="child : ${children}">
+        <header>
+            &lt;!&ndash; Blog Post Title - ${post.title} &ndash;&gt;
+            <h1 th:text="${child.id}">Child id</h1>
+        </header>
+        &lt;!&ndash; Post Body th:utext="${post.body}" &ndash;&gt;
+        <section th:utext="${child.firstName}">
+        </section>
+        <section th:utext="${child.lastName}">
+        </section>
+       
+        <hr/>
+    </article>-->
+
+    <footer>
+        <p>Copyright Zoli</p>
+    </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+</body>
+</html>

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-
 public class ChildCare{
 
     private List<Child> children;
