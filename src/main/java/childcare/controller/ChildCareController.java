@@ -1,6 +1,6 @@
 package childcare.controller;
 
-import childcare.domain.ChildCare;
+import childcare.model.ChildCare;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

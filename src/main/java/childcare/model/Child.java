@@ -1,4 +1,4 @@
-package childcare.domain;
+package childcare.model;
 
 import org.springframework.stereotype.Component;
 
