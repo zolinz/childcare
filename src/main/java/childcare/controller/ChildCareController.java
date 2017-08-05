@@ -6,6 +6,9 @@ import childcare.model.ChildRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -31,5 +34,22 @@ public class ChildCareController {
         model.addAttribute("children" , childRepo.findAll());
         return "views/list";
     }
+
+
+    @GetMapping("/enrollment")
+    public String greetingForm(Model model) {
+        model.addAttribute("child", new Child());
+        return "enrollment";
+    }
+
+    @PostMapping("/enrollment")
+    public String greetingSubmit(@ModelAttribute Child child) {
+        childRepo.save(child);
+        return "result";
+    }
+
+
+
+
 
 }

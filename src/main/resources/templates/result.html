@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Child enrollment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" th:href="@{/css/mystyle.css}" />
+</head>
+<body>
+<h1>Kiddo enrolled: </h1>
+<p th:text="'id: ' + ${child.id}" />
+<p th:text="'content: ' + ${child.firstName}" />
+<p th:text="'content: ' + ${child.lastName}" />
+<a href="/childcare/enrollment">Enrol another kid</a>
+
+<a href="/index.html">home</a>
+</body>
+</html>

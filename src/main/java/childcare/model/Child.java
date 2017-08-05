@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Child {
 
     @Id
-    @Column(name = "ID_TODDLER")
+    @Column(name = "ID")
     private int id;
 
     @Column(name = "FIRST_NAME")
