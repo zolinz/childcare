@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +9,28 @@
 
     <link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
 
+    <script src="js/application.js" type="application/javascript"></script>
 
 </head>
 
 
 <body>
+<script  type="application/javascript" src="js/validation.js"  />
+<script>
+    function hello() {
 
+    }
 
+    function hi(){
+
+    }
+</script>
 
 
 
         <header>
             <h1>Child Care </h1>
+            <h1><script>document.write(hi())</script></h1>
 
         </header>
         <section>
@@ -31,6 +41,7 @@
             Click <a href="/childcare/listkiddos">here </a> for all enrolled
             <br/>
             Click for enrollment <a href="/childcare/enrollment">here </a> for all enrolled
+            <button onclick="hello()">Try it</button>
         </article>
         <footer>
             <address>
