@@ -7,7 +7,7 @@
     <script type="application/javascript" th:src="@{/js/validation.js}" />
 </head>
 <body>
-<script>
+<!--<script>
     function validateForm(){
         var x = document.forms["myform"]["firstName"].value;
         alert("Put a message here");
@@ -18,7 +18,7 @@
         }
 
     }
-</script>
+</script>-->
 <h1>Form</h1>
 <form name="myform" action="#" th:action="@{/childcare/enrollment}" th:object="${child}" onsubmit="return validateForm()" method="post">
     <p>Id: <input type="text" th:field="*{id}" /></p>
