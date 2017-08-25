@@ -17,8 +17,8 @@ import java.util.List;
 @RequestMapping("/childcare")
 public class ChildCareController {
 
-    @Autowired
-    ChildCare childCare;
+    //@Autowired
+    //ChildCare childCare;
 
 
     @Autowired
@@ -28,7 +28,8 @@ public class ChildCareController {
     @RequestMapping("/listkiddos")
     public String getChildren(Model model){
 
-        List<Child> childrenDB = (List<Child>) childRepo.findAll();
+        // childRepo.findAll() --> implementing: select all
+        List<Child> childrenDB = (List<Child>) childRepo.findAll();  // It will return a child list -- array list
 
        // model.addAttribute("children" , childCare.getChildren());
         model.addAttribute("children" , childRepo.findAll());
